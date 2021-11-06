@@ -11,7 +11,8 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/home"> Home  </NavLink>
+            <NavLink to="/appointment">  Appointment </NavLink>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Toolbar>

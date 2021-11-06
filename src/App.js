@@ -7,11 +7,10 @@ import "@fontsource/poppins/900.css";
 import { BrowserRouter , Switch , Route } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Homepage/Home';
-import Header from './Shared/Header/Header';
+import Appointment from "./Components/AppointmentPage/Appointment";
 
 const theme = createTheme({
   palette: {
-    // mode: "",
     primary: {
       main: "#2BDCCE",
     },
@@ -33,13 +32,15 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header/>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route exact path="/appointment">
+            <Appointment></Appointment>
           </Route>
         </Switch>
       </BrowserRouter>
